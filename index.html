@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Nintendo Switch</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="avatar-position">
+                <img src="/img/avatar1.png" alt="Avatar" class="avatar">
+                <img src="/img/avatar2.png" alt="Avatar" class="avatar">
+                <img src="/img/avatar3.png" alt="Avatar" class="avatar">
+            </div>
+            <span class="btn-option">
+                    <a href="#" class="btn btn-warning btn-lg">
+                    <span class="glyphicon glyphicon-user"></span> ON</a>
+            </span>
+            <div id="sys-icons-row"></div>
+                <div id="column" onload="showTime()">
+                </div>
+                <img id="column">
+                <img src="https://img.icons8.com/material/25/000000/wifi.png">
+                </div>
+                <img id="column"> 
+                <img src="https://img.icons8.com/windows/25/000000/full-battery.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="/img/slide1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="/img/slide2.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="/img/slide3.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="/img/slide5.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+            </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function showTime(){
+            var time = new Date();
+            var hr = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            var am_pm = "AM";
+    
+            if(hr > 12){hr-=12;}
+            am_pm = "PM";
+            if(hr == 0){hr = 12;}
+    
+            hr = (hr<10) ? "0"+hr : hr;
+            min = (min<10) ? "0"+min : min;
+            sec = (sec<10) ? "0"+sec : sec;
+    
+            var currentTime = hr + ":" + min + ":" + sec + " " + am_pm ;
+            document.getElementById("clock").innerHTML = currentTime;
+            setTimeout(showTime, 1000);
+        }
+    showTime();
+    </script>
+</html>
