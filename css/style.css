@@ -1,5 +1,5 @@
 body{background-color: #000;}
 .container{margin: 0 auto; padding-top: 10px; background-color: honeydew; width: 850px;}
-.topnav-right{margin: 10px; padding: 10px; float: right;}
+.topnav-right{margin: 10px; padding: 10px; float: right; width: 300px;}
 .slide-show{margin: 0 auto; padding: 10px 5px; padding-left: 38px;}
 .btn-option{border: none; vertical-align:middle; color: white; padding: 12px 16px; display: inline;}
